@@ -13,7 +13,11 @@ def send_report(analysis_results):
     # Configurações do seu e-mail
     sender_email = "denizard.oliveira@gmail.com"
     sender_password = "oluqosczntfntzzz"  # Senha de app gerada
-    recipients = ["denizard.oliveira@gmail.com"]  # Enviando para você mesmo
+    recipients = [
+        "paulo.andre@parvi.com.br",
+        "thiago.jose@parvi.com.br",
+       
+    ]
     
     # Criar mensagem
     msg = MIMEMultipart()
