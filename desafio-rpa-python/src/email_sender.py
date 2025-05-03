@@ -5,17 +5,19 @@ from email.mime.text import MIMEText
 from email.mime.base import MIMEBase
 from email import encoders
 from pathlib import Path
+from dotenv import load_dotenv
+load_dotenv()
 import os
 
 def send_report(analysis_results):
     """Envia relatório por e-mail com anexo CSV usando configurações do Gmail"""
     
     # Configurações do seu e-mail
-    sender_email = "denizard.oliveira@gmail.com"
-    sender_password = "oluqosczntfntzzz"  # Senha de app gerada
+    sender_email = os.getenv("GMAIL_USER")
+    sender_password = os.getenv("GMAIL_APP_PASSWORD")
     recipients = [
-        "paulo.andre@parvi.com.br",
-        "thiago.jose@parvi.com.br",
+        "denizard.oliveira@gmail.com",
+       
        
     ]
     
